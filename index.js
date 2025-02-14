@@ -1,15 +1,16 @@
+import 'dotenv/config'
 import express from 'express'
 const app=express()
-const port=3000
-app.get("/",(req,res)=>{
-    res.send("hellow....!!!")
-})
-app.get("/ice-tea",(req,res)=>{
-    res.send("hellow from the tea!!!")
-})
-app.get("/twitter",(req,res)=>{
-    res.send("ysrdotcom")
-})
+const port=process.env.PORT||3000
+// app.get("/",(req,res)=>{
+//     res.send("hellow....!!!")
+// })
+// app.get("/ice-tea",(req,res)=>{
+//     res.send("hellow from the tea!!!")
+// })
+// app.get("/twitter",(req,res)=>{
+//     res.send("ysrdotcom")
+// })
 
 app.use(express.json())
 let ourData=[]
